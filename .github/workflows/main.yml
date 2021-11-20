@@ -19,3 +19,12 @@ jobs:
     - name: Rodando ambiente dev
       run: echo Deploy dev
       
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    needs: deploy-dev
+    steps:
+    - name: Rodando ambiente producao
+      run: echo Deploy producao
+      
