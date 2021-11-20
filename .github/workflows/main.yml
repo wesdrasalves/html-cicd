@@ -1,0 +1,20 @@
+name: DemoCD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Rodando processo deploy
+      run: echo Iniciando, build
+  
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+    needs: build
+    steps:
+    - name: Rodando ambiente dev
+      
