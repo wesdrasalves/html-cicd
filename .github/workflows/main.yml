@@ -17,4 +17,5 @@ jobs:
     needs: build
     steps:
     - name: Rodando ambiente dev
+      run: ecgi Deploy dev
       
